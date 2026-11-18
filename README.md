@@ -54,6 +54,20 @@ python main.py
 The script reads `MISTRAL_API_KEY` from the environment, sends one chat completion
 request to `mistral-small-latest`, and prints the assistant's reply.
 
+## GitHub integration (Vibe Code)
+
+If you work on this repository with Vibe Code (Le Chat workflows):
+
+- Vibe Code runs in an ephemeral cloud sandbox and only works with **existing** GitHub
+  repositories — it clones the repo into the sandbox, it cannot create one.
+- Connect your GitHub account in Le Chat (**Settings → Connectors**) and install the
+  Mistral GitHub App: <https://github.com/apps/mistralai/installations/new>
+- Give the app access to this repository with **Contents: Read and write** and
+  **Pull requests: Read and write**. Without these, pushes fail with `403` and PR
+  creation fails with `Resource not accessible by integration`.
+- All changes are committed and pushed directly to GitHub (branch + pull request).
+  The sandbox is deleted after the session and is not accessible locally.
+
 ## Docs
 
 - [Chat completions](https://docs.mistral.ai/studio/conversations/chat-completion)
