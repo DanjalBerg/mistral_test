@@ -1,7 +1,7 @@
 import os
 import sys
 
-from mistralai import Mistral
+from mistralai.client import Mistral
 
 MODEL = "mistral-small-latest"
 
