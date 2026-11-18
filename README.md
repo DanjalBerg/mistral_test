@@ -4,6 +4,11 @@ Minimal Mistral chat completion example using the official Python SDK (`mistrala
 
 ## 1. Install the SDK
 
+With [uv](https://docs.astral.sh/uv/) (recommended): nothing to install manually —
+`uv run` creates a virtualenv and installs `mistralai` from `pyproject.toml` automatically.
+
+With pip:
+
 ```bash
 pip install mistralai
 ```
@@ -45,9 +50,22 @@ setx MISTRAL_API_KEY "your-key"
 
 ## 4. Run the example
 
-From the project folder:
+From the project folder, with uv (installs the SDK automatically on first run):
 
 ```bash
+uv run main.py
+```
+
+On Windows PowerShell:
+
+```powershell
+uv run .\main.py
+```
+
+Or with pip and the system Python:
+
+```bash
+pip install -r requirements.txt
 python main.py
 ```
 
